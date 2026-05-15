@@ -1,11 +1,11 @@
 function eliminateUnsetBits(number) {
   // your code here
-  let newoutput= number.replace(/0/g, '')
-  if(newoutput === ''){
+  let newmethod = number.split('').filter( num => num === '1' ).join('');
+  if (newmethod.length === 0){
     return 0;
   } else{
-    let calculation = parseInt(newoutput, 2);
+    let calculation = parseInt(newmethod, 2);
     return calculation;
   }
 }
-console.log(eliminateUnsetBits("10000000101"));
+console.log(eliminateUnsetBits("11010101010101"))
