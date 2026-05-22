@@ -1,16 +1,15 @@
 String.prototype.toAlternatingCase = function () {
   // Define your method here :)
-  let newSet = '';
-  for (const letter of this) {
+  let letters = this.split('');
+  let newSet = letters.map(letter => {
     if (letter === letter.toUpperCase()){
-      newSet += letter.toLowerCase();
-    } else if ( letter === letter.toLowerCase()){
-      newSet += letter.toUpperCase();
+      return letter.toLowerCase();
+    } else if (letter === letter.toLowerCase()) {
+      return letter.toUpperCase();
+    } else {
+      return letter;
     }
-  }
-  return newSet
+  })
+  return newSet.join('')
 }
-​
-​
-​
 ​
